@@ -2,3 +2,6 @@
 CDのオリジナル音源とoff vocal音源の再生位置を合わせるためのプログラムです。ほぼChatGPTで作りました。
 ![example](https://github.com/user-attachments/assets/fa97b8cd-35dc-4c8a-9ee9-e421235109a9)
 上2つを入力すると、下2つが出力されます。
+
+# 実行ファイル版
+https://github.com/shomsato/atamaawase/releases/download/v1.0.0/atamaawase.exe
