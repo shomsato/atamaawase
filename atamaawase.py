@@ -93,12 +93,12 @@ def align_audio_with_phase_cancellation_optimized():
     )
 
     # ファイル名の設定（元のファイル名にoutputフォルダを指定）
-    original_filename = os.path.basename(original_file)
-    off_vocal_filename = os.path.basename(off_vocal_file)
+    original_filename = os.path.splitext(os.path.basename(original_file))[0]  # 拡張子を除去
+    off_vocal_filename = os.path.splitext(os.path.basename(off_vocal_file))[0]  # 拡張子を除去
     
     # 出力ファイルパスを設定
-    output_original_file = os.path.join(output_dir, f"aligned_{original_filename}")
-    output_off_vocal_file = os.path.join(output_dir, f"aligned_{off_vocal_filename}")
+    output_original_file = os.path.join(output_dir, f"aligned_{original_filename}.flac")
+    output_off_vocal_file = os.path.join(output_dir, f"aligned_{off_vocal_filename}.flac")
     
     # ステレオでファイル書き出し
     aligned_original.export(output_original_file, format="flac")
